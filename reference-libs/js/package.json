@@ -1,0 +1,40 @@
+{
+	"name": "elasi",
+	"version": "0.0.0-preA",
+	"description": "Reference library (JS) for EL/ASI protocol (local-first, local-only apps)",
+	"main": "./src/index.js",
+	"scripts": {
+		"build": "npm run build-all",
+		"prepare": "npm run build",
+		"build-all": "node scripts/build-all.js"
+	},
+	"devDependencies": {
+		"coveralls": "~3.1.1",
+		"moduloze": "~0.9.1",
+		"nyc": "~15.1.0",
+		"qunit": "~2.19.1"
+	},
+	"mz-dependencies": {
+		"index.js": "ELASI"
+	},
+	"exports": {
+		".": {
+			"import": "./src/index.mjs",
+			"default": "./src/index.js"
+		}
+	},
+	"repository": "getify/elasi",
+	"keywords": [
+		"elasi",
+		"security",
+		"apps",
+		"encryption"
+	],
+	"bugs": {
+		"url": "https://github.com/getify/elasi/issues",
+		"email": "getify@gmail.com"
+	},
+	"homepage": "https://github.com/getify/elasi",
+	"author": "Kyle Simpson <getify@gmail.com>",
+	"license": "MIT"
+}

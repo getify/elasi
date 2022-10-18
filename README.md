@@ -6,7 +6,7 @@
 
 ## Specification
 
-* [Version 1.0](1.0/spec.md)
+* [Version 1.0](1.0/spec.md) (Draft)
 
 ## Reference Libraries
 

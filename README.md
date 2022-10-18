@@ -4,6 +4,10 @@
 
 **EL/ASI** (**E**ncrypt **L**ocally, **A**ccount **S**ecure **I**nterchange) defines a protocol for protecting and exchanging data in local-first and local-only applications.
 
+## Motivation
+
+The EL/ASI specification is the foundation for the zero-server/low-server movement, which is an evolution of the web from client-server back to P2P.
+
 ## Specification
 
 * [Version 1.0](1.0/spec.md) (Draft)

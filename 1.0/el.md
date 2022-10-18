@@ -2,6 +2,10 @@
 
 [![License](https://img.shields.io/badge/license-MIT-a1356a)](../LICENSE.txt) ![Version: 1.0](https://img.shields.io/badge/Version-1.0-blue) ![Status: Draft](https://img.shields.io/badge/Draft-Status-orange)
 
+This section of the EL/ASI specification deals with the importance of storing user data locally on their device. Keeping user data safe, private, and secure, is of utmost importance.
+
+The **EL** standard here lays out how, with standard web technology and APIs, we ensure an encrypted data store on the user's device, one which can run completely offline (no internet) and thus has zero reliance on servers.
+
 ## JSON, Base64, UTF-8, Binary
 
 The following algorithms make heavy reference to terms "Base64". But the hashing/encryption/decryption APIs all use binary data. JS strings also hold underlying UTF-16 (double UTF-8) character data that must be preserved. And application data is typically held in objects, but only strings can be encrypted/decrypted.
@@ -194,3 +198,9 @@ Here's an example of what all the information implied by the **EL** standard mig
     "encrypted": "c/XL...cZzK"
 }
 ```
+
+## License
+
+[![License](https://img.shields.io/badge/license-MIT-a1356a)](LICENSE.txt)
+
+All code and documentation are (c) 2022 Kyle Simpson and released under the [MIT License](http://getify.mit-license.org/). A copy of the MIT License [is also included](LICENSE.txt).

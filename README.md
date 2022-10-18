@@ -1,16 +1,16 @@
-# EL/ASI 1.0: Local App Security Protocol
+# EL/ASI: Local App Security Protocol
 
-[![License](https://img.shields.io/badge/license-MIT-a1356a)](LICENSE.txt)
+[![License](https://img.shields.io/badge/license-MIT-a1356a)](LICENSE.txt) ![Version: 1.0](https://img.shields.io/badge/Version-1.0-blue)
 
-**EL/ASI** (**E**ncrypt **L**ocally, **A**ccount **S**ecure **I**nterchange) 1.0 defines a protocol for protecting and exchanging data in local-first and local-only applications.
+**EL/ASI** (**E**ncrypt **L**ocally, **A**ccount **S**ecure **I**nterchange) defines a protocol for protecting and exchanging data in local-first and local-only applications.
 
-## Stay Tuned
+## Specification
 
-More info coming soon.
+* [Version 1.0](1.0/spec.md)
 
 ## Reference Libraries
 
-The following reference implementations of the EL/ASI 1.0 protocol are available:
+The following reference implementations of the EL/ASI protocol are available:
 
 * [elasi (JS)](reference-libs/js/README.md) | [npm/elasi](https://npmjs.com/package/elasi)
 

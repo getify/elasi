@@ -145,6 +145,24 @@ The secret challenge is also generated via Argon2-ID hashing (with the same para
 
 Regenerating a secret challenge from the user's entered passphrase should match this stored secret challenge, and if so, then it's safe to attempt the full data decryption. Otherwise, the user can be notified their entered secret passphrase does not match (and that decryption would fail).
 
+### Changing The Passphrase
+
+Applications must support the user changing their secret passphrase.
+
+Since the passphrase is the source of the encryption key, the user must first input the current passphrase (allowing decryption).
+
+Before re-encryption of the decrypted user data, the application must regenerate a new salt to use for the new hash key derivation, and must also update the secret challenge (using the new salt).
+
+### Passphrase Reset
+
+Applications are **allowed** to offer a remote backup of the encryption key (and *iv*), which facilitates the possibility for a passhrase reset if the user forgets their passphrase.
+
+The application must generate/use a cross-device identifier to uniquely identify the user's account, so the user is able to properly retrieve this encryption key/iv.
+
+Applications must never remotely store the user's passphrase (nor the hash salt).
+
+Applications must never remotely store both the user's encryption key/iv *and* their encrypted data -- that is, applications must choose storing one or the other, never both.
+
 ## Encrypting / Decrypting User Data
 
 Each time the user's data is set/updated, a new `iv` (random initialization vector) must be generated. The user's passphrase-derived encryption/decryption key plus the `iv` will be used with `crypto.subtle.encrypt(..)` / `crypto.subtle.decrypt(..)`, and the `"AES-GCM"` algorithm.
@@ -163,7 +181,7 @@ These values are stored in plain-text (not encrypted), so it's important the use
 
 To prevent ambiguity, the application should never allow duplicate accounts with the same label.
 
-### Deleting Accoutns
+### Deleting Accounts
 
 Deleting local accounts, if supported, is up to the application to determine (not controlled by this specification).
 
